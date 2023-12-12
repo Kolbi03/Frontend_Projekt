@@ -18,12 +18,21 @@
     </nav>
   </header>
 <body>
-  <div class="form">
+  <div class="form__group field">
     <form method="post">
-      Esemény neve: <input type="text" id="title"> <br>
-      Esemény leírása: <input type="text" id="description"> <br>
-      Esemény időpontja: <input type="date" id="date"> <br>
-      <!--  Hetente ismétlődik? <input type="checkbox" id="iterance"> <br>-->
+      <label for="title">Esemény neve</label>
+      <input type="text" id="title"> <br>
+      <label for="description">Esemény leírása</label>
+      <input type="text" id="description"> <br>
+      <label for="people">Meghívottak</label>
+      <input type="text" id="people"> <br>
+      <label for="place">Helyszín</label>
+      <input type="text" id="place"> <br>
+      <label for="date">Dátum</label>
+      <input type="date" id="date"> <br>
+      <label for="iterance">Ismétlődik?</label>
+      <input type="checkbox" id="iterance"> <br>
+
       <input type="button" id="submit" value="Beküldés">
     </form>
   </div>
