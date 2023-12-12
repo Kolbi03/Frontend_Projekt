@@ -24,7 +24,10 @@ function newEvent()
     let line = title+" "+description+" "+date;
     eventsArray.push(line);
 
-    //ez szar
+    let string = JSON.stringify(eventsArray) //JSON típusból stringre konvertál
+    localStorage.setItem("lista", string) //Eltárolja lokálisan
+
+    //működik
 
     document.getElementById('title')!.textContent="";
     document.getElementById('description')!.textContent="";
@@ -33,15 +36,22 @@ function newEvent()
     
 }
 
-    //ez gecire semmit nem csinál 
+    //működik, de csak egy adatot tárol el
 function loadUl()
 {
+
+  let kiString = localStorage.getItem("lista") //Kiszedi a lokális tárhelyből
+  let kiLista;
+  if (typeof kiString === 'string') {
+    kiLista = JSON.parse(kiString); //Visszakonvertál jsonbe
+  }
+
   const events = document.getElementById('events');
-  for (let index = 0; index < eventsArray.length; index++) 
+  for (let index = 0; index < kiLista.length; index++)
   {
-    console.log(eventsArray[index]);
-      var  newLi = document.createElement('li');
-      newLi.textContent=eventsArray[index];
+    console.log(kiLista[index]);
+      var newLi = document.createElement('li');
+      newLi.textContent=kiLista[index];
       events!.appendChild(newLi);
     
   }
