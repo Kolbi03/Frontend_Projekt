@@ -36,7 +36,7 @@ function newEvent()
     
 }
 
-    //működik, de csak egy adatot tárol el
+    //működik, de csak egy adatot tárol el (Ez az egész ideiglenes, csak tesztelés miatt van bent)
 function loadUl()
 {
 
