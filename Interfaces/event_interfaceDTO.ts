@@ -2,7 +2,7 @@ export interface EventInterfaceDTO {
     title: string;
     description: string;
     invited: string;
-    location: number;
+    location: string;
     date: Date;
     repetiton: boolean;
 }
