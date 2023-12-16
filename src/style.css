@@ -54,7 +54,7 @@ label {
   margin-top: 10px;
 }
 
-input[type=button] {
+button {
   width: 50%;
   height: 120%;
   color: white;
@@ -66,12 +66,20 @@ input[type=button] {
   margin-top: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+
 }
 
-input[type=button]:hover {
+button:hover {
   background-color: #5454fa
 }
 
 input[type=checkbox] {
   margin-top: 20px;
+}
+
+#errorMessage {
+  margin-top: 50px;
+  font-weight: bold;
+  color: red;
+  font-size: large;
 }
