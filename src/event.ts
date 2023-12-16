@@ -12,7 +12,7 @@ export class Event implements EventInterfaceDTO {
         invited: string, date: Date | null, repetition: boolean) {
         
         if (title.trim() == "") {
-            throw new Error("Az eseménynek nevet adni kötelező!!");
+            throw new Error("Az eseménynek nevet adni kötelező!");
         } else if (description.trim() == "") {
             throw new Error("Az eseménynek leírást adni kötelező!");
         } else if (location.trim() == "") {
